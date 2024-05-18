@@ -102,7 +102,7 @@ There are a few special bits
       </qemu:frontend>
     </qemu:device>
   </qemu:override>
-[...]
+</domain>
 ```
 Generally speaking:
 * The `<features>` section enables as many "accelerators" as possible but also masks the emulation as much as possible
