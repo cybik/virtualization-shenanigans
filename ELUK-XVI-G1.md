@@ -123,7 +123,7 @@ to decimal, these would become `5421` and `4919`.
 
 In order to tell the GPU to f*ck off and just have a fake screen that forces a decent-sized framebuffer for Steam Streaming:
 
-    https://github.com/itsmikethetech/Virtual-Display-Driver
+[https://github.com/itsmikethetech/Virtual-Display-Driver](https://github.com/itsmikethetech/Virtual-Display-Driver)
 
 This driver will fake an actual monitor and force the system to have a fair resolution on boot. Very practical for streaming
 setups if you don't want the smoke.
