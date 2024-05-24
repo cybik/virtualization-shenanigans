@@ -78,9 +78,10 @@ There are a few special bits
     <smm state='on'/>
     <ioapic driver='kvm'/>
   </features>
-  <cpu mode='host-passthrough' check='none' migratable='on'>
-    <feature policy='disable' name='hypervisor'/>
-    <feature policy='require' name='topoext'/> <!-- for AMD only -->
+  <cpu mode="host-passthrough" check="none" migratable="on">
+    <topology sockets="1" dies="1" cores="6" threads="2"/>
+    <cache mode="passthrough"/>
+    <feature policy="require" name="topoext"/>
   </cpu>
   <clock offset='localtime'>
     <timer name='rtc' present='no' tickpolicy='catchup'/>
