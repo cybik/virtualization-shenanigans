@@ -109,6 +109,8 @@ Generally speaking:
 * The `<clock>` section I just copied from the net. might be helping.
 * The `<qemu:commandline>` section is to tell the nVidia driver to stop being itself
 * The `<qemu:override>` is VERY important because it sets the right "SUBSYSTEM" device identifiers used in Windows driver detection bollocks
+* ***UPDATE***: The `<cpu>` section was edited back to re-enable the hypervisor AND to have a reasonable topology, instead of letting QEMU decide
+  * This may have been a problem, as QEMU was deducing it should show the CPU as multiple *sockets*, possibly enabling weird cross-socket stuff in Windows
 
 #### Okay but what the fuck are those values
 
