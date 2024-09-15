@@ -115,16 +115,20 @@ Generally speaking:
 
 #### Okay but what the fuck are those values
 
-Long story short: the `x-pci-sub-vendor-id` and `x-pci-sub-device-id` can be extracted from `lspci -nnk -s 01:00` 
-(in my system, the nVidia stuff is hooked up to PCIe bus `01:00`), and represent the ODM's subsystem identifier, 
-not the actal devices'.
-
-In the case of ***my*** Prometheus XVI, the Vendor ID was `152d`, and the Device ID was `1337` (heh). Converted
-to decimal, these would become `5421` and `4919`.
+Long story short: the `x-pci-sub-vendor-id` and `x-pci-sub-device-id` are identifiers that *need* to be known,
+represent the ODM's subsystem identifier(s), and they can be extracted using the following command in Linux:
+```
+lspci -nnk -s 01:00
+```
+In the case of ***my*** Prometheus XVI:
+* In my system, the nVidia dGPU is hooked up to PCIe bus `01:00`, matching the command's last option
+* The Vendor ID was `152d`, and the Device ID was `1337` 
+  * 1337. heh.
+  * Converted to decimal, these become `5421` and `4919`
 
 ### Virtual Monitor
 
-In order to tell the GPU to f*ck off and just have a fake screen that forces a decent-sized framebuffer for Steam Streaming:
+In order to tell the GPU to f*ck off and just have a fake screen that forces a decent-sized framebuffer for [Steam, Sunshine, etc] Streaming tech:
 
 [https://github.com/itsmikethetech/Virtual-Display-Driver](https://github.com/itsmikethetech/Virtual-Display-Driver)
 
