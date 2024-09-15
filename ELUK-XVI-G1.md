@@ -123,7 +123,7 @@ lspci -nnk -s 01:00
 In the case of ***my*** Prometheus XVI:
 * In my system, the nVidia dGPU is hooked up to PCIe bus `01:00`, matching the command's last option
 * The Vendor ID was `152d`, and the Device ID was `1337` 
-  * 1337. heh.
+  * `1337`. heh.
   * Converted to decimal, these become `5421` and `4919`
 
 ### Virtual Monitor
